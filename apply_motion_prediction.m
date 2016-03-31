@@ -48,6 +48,6 @@ if isempty(cx) == 1
     cy_new = dres.y(end) + dres.h(end)/2;
 else
     cx_new = cx(end) + vx * (fr_current + 1 - fr(end));
-    cy_new = cy(end) + vy * (fr_current + 1 - fr(end));
+    cy_new = cy(end) + vy * (fr_current + 1 - fr(end));%why not 'cy_new = cy(end) + vy * (fr_current - fr(end))'.
 end
 prediction = [cx_new cy_new];
